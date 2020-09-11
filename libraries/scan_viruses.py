@@ -18,8 +18,8 @@ def scan_viruses(filename, configlocal):
 					virname, virsigs = line.split('=')
 					virusFinalSign = virsigs.replace('\n','')
 					fileCheckSumMD5 = hashlib.md5(filecontent).hexdigest()
-					print(virusFinalSign)
-					print(hashlib.md5(filecontent).hexdigest())
+					#print(virusFinalSign)
+					#print(hashlib.md5(filecontent).hexdigest())
 					if fileCheckSumMD5==virusFinalSign:
 						print '\033[91m' + "[Infected by %s]" % virname + '\033[0m' + " %s" % fileline
 						infectedsel = raw_input("What will you do with the infected file?\n[1] Remove file\n[2] Nothing\nInput Answer: ")
@@ -40,8 +40,8 @@ def scan_viruses(filename, configlocal):
 			virname, virsigs = line.split('=')
 			virusFinalSign = virsigs.replace('\n','')
 			fileCheckSumMD5 = hashlib.md5(open(filename).read()).hexdigest()
-			print(fileCheckSumMD5)
-			print(virusFinalSign)
+			#print(fileCheckSumMD5)
+			#print(virusFinalSign)
 			if fileCheckSumMD5 == virusFinalSign:
 				print '\033[91m' + "[Infected by "+virname+"]" + '\033[0m' + filename_ext +" "
 				infectedsel = raw_input("What will you do with the infected file?\n[1] Remove file\n[2] Nothing\nInput Answer: ")
@@ -52,7 +52,7 @@ def scan_viruses(filename, configlocal):
 					print "It's Save for Me"
 			elif fileCheckSumMD5 != virusFinalSign:
 				safefile += 1
-				if safefile == 1781:
+				if safefile == 1:
 					print '\033[92m' + "[No Virus]" + '\033[0m' + " %s" % filename_ext
 			
 	else:

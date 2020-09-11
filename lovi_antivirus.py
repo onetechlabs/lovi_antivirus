@@ -2,7 +2,7 @@
 import libraries
 import sys
 
-configlocal = "/home/onetechlabs/Public/Programming-Projects/Desktop_Software/Python/Projects/antivirus_desktop/db/config.cfg"
+configlocal = "/home/onetechlabs/Public/Programming-Projects/Desktop_Software/Python/Projects/lovi_antivirus/db/config.cfg"
 
 while True:
 	select = raw_input("Lovi Antivirus 1.0\n[1] Start Scanning\n[2] View History Scan\n[x] Quit\nInput Answer: ")
